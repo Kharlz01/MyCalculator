@@ -1,0 +1,49 @@
+<!-- <view class="container">
+  <view class="input-area">
+    <text>{{output}}</text>
+  </view>
+  <view class="button-area">
+    <button onTap="onBack">←</button>
+    <button onTap="onSign">±</button>
+    <button onTap="onOp" data-value="^">^</button>
+    <button onTap="onOp" data-value="/">/</button>
+  </view>
+  <view class="button-area">
+    <button onTap="onInput" data-value="7">7</button>
+    <button onTap="onInput" data-value="8">8</button>
+    <button onTap="onInput" data-value="9">9</button>
+    <button onTap="onOp" data-value="*">*</button>
+  </view>
+  <view class="button-area">
+    <button onTap="onInput" data-value="4">4</button>
+    <button onTap="onInput" data-value="5">5</button>
+    <button onTap="onInput" data-value="6">6</button>
+    <button onTap="onOp" data-value="-">-</button>
+  </view>
+  <view class="button-area">
+    <button onTap="onInput" data-value="1">1</button>
+    <button onTap="onInput" data-value="2">2</button>
+    <button onTap="onInput" data-value="3">3</button>
+    <button onTap="onOp" data-value="+">+</button>
+  </view>
+  <view class="button-area">
+    <button onTap="onClear">AC</button>
+    <button onTap="onInput" data-value="0">0</button>
+    <button onTap="onDot">.</button>
+    <button onTap="onCalculate">=</button>
+  </view>
+</view> -->
+
+<view class="container">
+  <view class="input-area">
+    <text>{{output}}</text>
+  </view>
+
+  <!-- Iterar sobre cada fila de botones -->
+  <view class="button-area" a:for="{{buttonRows}}" a:key="index">
+    <!-- Iterar sobre cada botón en la fila -->
+    <button a:for="{{item}}" a:key="value" onTap="{{item.handler}}" data-value="{{item.value}}">
+      {{item.label}}
+    </button>
+  </view>
+</view>
