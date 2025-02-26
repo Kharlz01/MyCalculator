@@ -134,11 +134,7 @@ Page({
 
   // Funcion para eliminar el ultimo caracter agregado //
   onBack() {
-    const {
-      op,
-      num1,
-      num2
-    } = this.data;
+    const { op, num1, num2} = this.data;
 
     // Valida variable a ajustar
     if (!op) {
@@ -180,7 +176,7 @@ Page({
         break;
 
       case '/':
-        result = n2 === 0 ? "0" : n1 / n2;
+        result = n2 === 0 ? "0" : n1 / n2; // Se establece 0 para evitar valores NaN
         break;
 
       case '^':
